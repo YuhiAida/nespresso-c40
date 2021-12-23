@@ -1,7 +1,7 @@
 int hofflargo=8000;
 int hoffcorto=6000;
-int oncorto=8000;
-int onlargo=8500;
+int onShort=9000;
+int onLarge=8500;
 
 void setup() {
 pinMode(19, OUTPUT); //relay1, heater
@@ -25,27 +25,19 @@ void loop() {
     digitalWrite(3, HIGH); //turn on led for short coffe
     digitalWrite(19, LOW); //Turns on the heater x secs
     digitalWrite(17, LOW); //Turns on the pump x secs
-    delay(onlargo);
+    delay(onShort);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onShort);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hofflargo);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hofflargo);
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
-    digitalWrite(19, HIGH); //Turns off heater    
+    delay(onShort);
+    digitalWrite(19, HIGH); //Turns off heater   
     delay(2000);
     digitalWrite(17, HIGH); //Turns off pump
-    digitalWrite(3, LOW);
+    digitalWrite(3, LOW); //Turn off led for short coffe
     delay(1000);
     
     
@@ -54,35 +46,35 @@ void loop() {
     digitalWrite(19, LOW); //Turns on the heater 3 secs(pre heat)
     //delay(2000);
     digitalWrite(17, LOW); //Turns on the pump 15 secs
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown 
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater  
     delay(hofflargo);  //cooldown 
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater
     delay(hofflargo);  //cooldown heater
     digitalWrite(19, LOW); //Turns on heater again
-    delay(onlargo);
+    delay(onLarge);
     digitalWrite(19, HIGH); //Turns off heater    
     delay(2000);
     digitalWrite(17, HIGH); //Turns off pump

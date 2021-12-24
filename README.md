@@ -1,5 +1,5 @@
 # Nespresso-c40
-This project is based on a Nespresso C40 that it's motherboard was burn in a power outage. Due to the high price, no availability and shipping time in Argentina it's not not worth repair it. So here I am.
+This project is based on a Nespresso C40 that it's motherboard was burn in a power outage. Due to the high price, no availability and shipping time in Argentina it's not worth repair it. So here I am.
 
 ***Early diagram*** 
 

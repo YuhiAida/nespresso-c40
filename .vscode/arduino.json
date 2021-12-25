@@ -1,6 +1,4 @@
 {
-    "configuration": "cpu=atmega328old",
     "board": "arduino:avr:nano",
-    "port": "COM3",
-    "sketch": "nespresso-c40.ino"
+    "port": "COM3"
 }

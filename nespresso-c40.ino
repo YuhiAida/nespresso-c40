@@ -21,71 +21,44 @@ digitalWrite(2, LOW);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   int button1=digitalRead(6); //short coffee
   int button2=digitalRead(5); //large coffee
 
-  if (button1==LOW) { //short
+  if (button1==LOW) { //short coffee
+
     digitalWrite(3, HIGH); //turn on led for short coffee
-    digitalWrite(19, LOW); //Turns on the heater x secs
-    digitalWrite(17, LOW); //Turns on the pump x secs
-    delay(onShort);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffShort);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onShort);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffShort);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onShort);
-    digitalWrite(19, HIGH); //Turns off heater   
-    delay(2000);
-    digitalWrite(17, HIGH); //Turns off pump
+    digitalWrite(17, LOW); //Turns on the pump 
+    digitalWrite(19, LOW); //Turns on the heater
+
+      for (int i = 0; i < 5; i++)
+      {
+        delay(hOffShort); //Cooldown heater
+        digitalWrite(19, LOW); //Turns on the heater
+        delay(onShort); //Keep the heater on
+        digitalWrite(19, HIGH); //Turns off heater
+      }
+      //End loop
+      delay(500);
     digitalWrite(3, LOW); //Turn off led for short coffee
-    delay(1000);
-    
-    
-  }else if (button2==LOW) { //largo
-    digitalWrite(2, HIGH); //turn on led for short coffee
-    digitalWrite(19, LOW); //Turns on the heater 3 secs(pre heat)
-    //delay(2000);
-    digitalWrite(17, LOW); //Turns on the pump 15 secs
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffLarge);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffLarge);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffLarge);  //cooldown heater
-    /*
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffLarge);  //cooldown 
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater  
-    delay(hOffLarge);  //cooldown 
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffLarge);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater
-    delay(hOffLarge);  //cooldown heater
-    digitalWrite(19, LOW); //Turns on heater again
-    delay(onLarge);
-    digitalWrite(19, HIGH); //Turns off heater    
-    */
-    delay(2000);
     digitalWrite(17, HIGH); //Turns off pump
-    digitalWrite(2, LOW);
-    delay(1000);
+    
+  }else if (button2==LOW) { //large coffee
+
+    digitalWrite(2, HIGH); //turn on led for large coffee
+    digitalWrite(17, LOW); //Turns on the pump 
+    digitalWrite(19, LOW); //Turns on the heater
+
+      for (int i = 0; i < 8; i++)
+      {
+        delay(hOffLarge);  //cooldown heater
+        digitalWrite(19, LOW); //Turns on the heater
+        delay(onLarge); //Keep the heater on
+        digitalWrite(19, HIGH); //Turns off heater
+      }
+      //End loop
+    delay(500);
+    digitalWrite(17, HIGH); //Turns off pump
+    digitalWrite(2, LOW); //Turn off led for large coffee
     }
 
 }

@@ -15,4 +15,4 @@ This project is based on a Nespresso C40 that it's motherboard was burn in a pow
 
 ***Final crappy diagram***
 
-![Final crappy diagram](https://user-images.githubusercontent.com/21134775/148599757-6b4f8efa-c66c-414a-83f0-089704aa776e.jpg)
+![Final crappy diagram](https://user-images.githubusercontent.com/21134775/148602047-53a9e56e-f0a2-40b4-99fe-df520b1403f9.png)

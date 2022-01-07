@@ -17,9 +17,9 @@ int function1 = 0;
 int function2 = 0;
 
 int hOffShort=2000; //Cooldown time(OFF) for the heating element in a short coffee
-int hOffLarge=3000; //Cooldown time(OFF) for the heating element in a large coffee 
+int hOffLarge=2000; //Cooldown time(OFF) for the heating element in a large coffee 
 int onShort=4000; //Time the heating element is ON when a short coffee is selected
-int onLarge=5000; //Time the heating element is ON when a large coffee is selected
+int onLarge=4000; //Time the heating element is ON when a large coffee is selected
 
 void setup()
 {
@@ -43,18 +43,15 @@ void setup()
 //  This is used in case you run out of water in the tank, the pump just won't load until you use this function
 void LoadPump()
 {
-  digitalWrite(2, HIGH);
-  digitalWrite(3, HIGH);
-
-  for (int i = 0; i < 20; i++)
+  digitalWrite(3, HIGH);  //led on
+  for (int i = 0; i < 10; i++)
   {
-    digitalWrite(17, LOW);
+    digitalWrite(17, LOW);  //relay on
     delay(50);
-    digitalWrite(17, HIGH);
+    digitalWrite(17, HIGH); //relay off
     delay(50);
   }
-  digitalWrite(2, LOW);
-  digitalWrite(3, LOW);
+  digitalWrite(3, LOW);  //led off
 }
 
 //  Now that the machine doesn't have a temperature regulator the first cup will be colder so 
@@ -62,18 +59,22 @@ void LoadPump()
 void HeatWatter()
 {
   digitalWrite(19, LOW);
-  delay(3000);
+  for (int i = 0; i < 2; i++)
+  {
+    digitalWrite(2, HIGH);
+    delay(500);
+    digitalWrite(2, LOW);
+    delay(500);
+  }
   digitalWrite(19, HIGH);
 }
 
 void CooldownHeater()
 {
-  digitalWrite(3, HIGH);
   digitalWrite(2, HIGH);
   digitalWrite(17, LOW);
   delay(10000);
   digitalWrite(17, HIGH);
-  digitalWrite(3, LOW);
   digitalWrite(2, LOW);
 }
 
@@ -134,6 +135,7 @@ void loop()
     function1 = 0;
     break;
   default:
+    function1 = 0;
     break;
   }
 
@@ -152,6 +154,11 @@ void loop()
     function2 = 0;
     break;
   default:
+    function2 = 0;
     break;
   }
+
+function1 = 0;
+function2 = 0;
+
 }

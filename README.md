@@ -12,3 +12,7 @@ This project is based on a Nespresso C40 that it's motherboard was burn in a pow
 ***Now with working leds/buttons***
 
 ![Now with working leds/button](https://user-images.githubusercontent.com/21134775/147394204-90162749-aa90-46f4-a4bd-9f2ca618771b.png)
+
+***Final crappy diagram***
+
+![Final crappy diagram](https://user-images.githubusercontent.com/21134775/148599757-6b4f8efa-c66c-414a-83f0-089704aa776e.jpg)

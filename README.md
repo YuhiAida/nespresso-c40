@@ -1,6 +1,18 @@
 # Nespresso-c40
 This project is based on a Nespresso C40 that it's motherboard was burn in a power outage. Due to the high price, no availability and shipping time in Argentina it's not worth repair it. So here I am.
 
+**operation:**
+Fist I didn't use the temperature sensor that comes with this machine, so be carefull, the heating element could result damage along with other plastic parts.
+
+***Short coffee button:*** 
+ - 1 click short coffee 80ml~
+ - Press at least 1 sec. to fill pump(if the pump suck air).
+ - 
+***Large coffee button***
+- 1 click large coffe
+- 2 click pump wather without turning on the heating element(if you want "cold" coffe or cooling down the heating element for some reason)
+- Press at least 1 sec will turn on the heating element for 4 seconds.
+
 ***Early diagram*** 
 
 ![Diagram](https://user-images.githubusercontent.com/21134775/147394226-c333a831-9490-47dc-9b90-3fe3f03c623e.png)
